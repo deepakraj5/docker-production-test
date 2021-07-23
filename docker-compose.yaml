@@ -1,0 +1,19 @@
+version: '3'
+services:
+    express:
+        build: ./server/
+        container_name: express_app
+        ports:
+            - "3000-3001"
+        environment: 
+            DB_USERNAME: kannan
+            DB_PASSWORD: kannanpass
+            DB_HOST: db
+            DB_PORT: 27017
+    
+    db:
+        image: mongo:latest
+        container_name: mongo-database
+        environment: 
+            MONGO_INITDB_ROOT_USERNAME: kannan
+            MONGO_INITDB_ROOT_PASSWORD: kannanpass
