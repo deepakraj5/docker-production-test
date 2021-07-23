@@ -2,8 +2,6 @@ version: '3'
 services:
     express:
         build: ./server/
-        ports:
-            - "3000-3001"
         environment: 
             DB_USERNAME: kannan
             DB_PASSWORD: kannanpass
