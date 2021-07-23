@@ -10,6 +10,8 @@ services:
             DB_PASSWORD: kannanpass
             DB_HOST: db
             DB_PORT: 27017
+        depends_on: 
+            - db
     
     db:
         image: mongo:latest
